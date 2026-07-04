@@ -101,15 +101,24 @@ API base: `http://localhost:8000/api/v1`
 
 ## GitHub Pages Deployment
 
-Your site URL: **https://nightpgmr.github.io/testshopp/**
+**Live URL:** https://nightpgmr.github.io/testshopp/
 
-### One-time setup (required!)
+### Setup (one time)
 
 1. Open **https://github.com/nightpgmr/testshopp/settings/pages**
-2. Under **Build and deployment → Source**, select **GitHub Actions** (not "Deploy from branch → main")
-3. Push to `main` — the workflow builds and deploys automatically
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Select branch **`gh-pages`** and folder **`/ (root)`**
+4. Click **Save**
 
-> If you see the README instead of the shop, Pages is pointing at the `main` branch. Switch to **GitHub Actions** or set branch to **`gh-pages`** / root.
+> Do **not** use "GitHub Actions" as source — this project deploys to the `gh-pages` branch.
+
+### How it works
+
+Every push to `main` runs the workflow → builds Vue app → pushes to `gh-pages` branch → GitHub Pages serves it.
+
+### If you see README instead of the shop
+
+Pages is pointing at `main` branch. Change it to **`gh-pages`** as described above.
 
 ### Manual build
 
