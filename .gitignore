@@ -1,0 +1,16 @@
+/node_modules
+/dist
+/docs/
+!docs/.gitkeep
+.DS_Store
+
+# Backend
+backend/vendor/
+backend/.env
+backend/storage/
+backend/bootstrap/cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
