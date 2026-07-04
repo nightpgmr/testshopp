@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "build:pages": "vue-tsc -b && vite build --mode pages",
+    "build:pages": "vue-tsc -b && vite build --mode pages && node -e \"require('fs').writeFileSync('../docs/.nojekyll','')\"",
     "preview": "vite preview"
   },
   "dependencies": {

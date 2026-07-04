@@ -101,12 +101,22 @@ API base: `http://localhost:8000/api/v1`
 
 ## GitHub Pages Deployment
 
-1. Push repo to GitHub
-2. Go to **Settings → Pages**
-3. Source: **Deploy from branch** → `gh-pages` / root
-4. Or use the included GitHub Action (auto-deploy on push to `main`)
+Your site URL: **https://nightpgmr.github.io/testshopp/**
 
-Update `base` path in `frontend/vite.config.ts` if your repo name differs from `testshopp`.
+### One-time setup (required!)
+
+1. Open **https://github.com/nightpgmr/testshopp/settings/pages**
+2. Under **Build and deployment → Source**, select **GitHub Actions** (not "Deploy from branch → main")
+3. Push to `main` — the workflow builds and deploys automatically
+
+> If you see the README instead of the shop, Pages is pointing at the `main` branch. Switch to **GitHub Actions** or set branch to **`gh-pages`** / root.
+
+### Manual build
+
+```bash
+cd frontend
+npm run build:pages
+```
 
 ---
 
