@@ -1,12 +1,13 @@
 import type { Product, Category, Brand, Slide } from '@/types'
+import { assetUrl } from '@/utils/asset'
 
 const IMG = {
-  iphone16Teal: '/images/products/iphone-16-teal.png',
-  iphone16Pro: '/images/products/iphone-16-pro-desert-titanium.png',
-  mobileCategory: '/images/categories/mobile.png',
-  laptopCategory: '/images/categories/laptop.png',
-  watchCategory: '/images/categories/watch.png',
-  tabletCategory: '/images/categories/tablet.png',
+  iphone16Teal: assetUrl('images/products/iphone-16-teal.png'),
+  iphone16Pro: assetUrl('images/products/iphone-16-pro-desert-titanium.png'),
+  mobileCategory: assetUrl('images/categories/mobile.png'),
+  laptopCategory: assetUrl('images/categories/laptop.png'),
+  watchCategory: assetUrl('images/categories/watch.png'),
+  tabletCategory: assetUrl('images/categories/tablet.png'),
 }
 
 export const heroSlides: Slide[] = [
